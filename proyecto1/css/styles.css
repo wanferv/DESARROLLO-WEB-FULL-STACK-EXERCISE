@@ -1,0 +1,172 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+.background {
+    background: url('../img/imagen.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Menú superior */
+.menu-superior {
+    background: rgba(255, 0, 0, 0.9); /* Fondo rojo semitransparente */
+    position: relative;
+    z-index: 1000;
+}
+
+.menu-superior ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menu-superior ul > li {
+    position: relative; /* Necesario para submenús */
+    margin: 0 15px;
+}
+
+.menu-superior ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-superior ul > li > a:hover {
+    background: #ff5733;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Submenús */
+.submenu {
+    display: none; /* Ocultar completamente */
+    position: absolute;
+    top: 100%; /* Mostrar justo debajo del menú principal */
+    left: 0;
+    background: rgba(255, 0, 0, 0.9); /* Fondo rojo similar al menú */
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    visibility: hidden; /* Garantiza que no se vea ni interfiera */
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(-10px); /* Ligeramente más arriba para la animación */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu li {
+    padding: 8px 15px;
+}
+
+.submenu li a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    background: #ff5733; /* Color destacado al hover */
+    border-radius: 4px;
+}
+
+/* Mostrar submenú al pasar el cursor */
+.menu-superior ul li:hover .submenu {
+    display: block; /* Mostrar submenú */
+    visibility: visible; /* Hacerlo visible */
+    opacity: 1; /* Hacerlo opaco */
+    transform: translateY(0); /* Animación a su posición natural */
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botones principales */
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.boton {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 260px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.boton.rojo {
+    background: #e74c3c;
+}
+
+.boton.amarillo {
+    background: #f1c40f;
+}
+
+.boton.azul {
+    background: #3498db;
+}
+
+.boton.social img {
+    width: 40px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.boton.menu {
+    background: #f39c12;
+}
+
+.boton.almacen {
+    background: #9b59b6;
+}
+
+.boton.verde {
+    background: #2ecc71;
+    font-size: 20px;
+    padding: 12px 20px;
+}

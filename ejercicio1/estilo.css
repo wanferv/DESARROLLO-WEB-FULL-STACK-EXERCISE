@@ -1,0 +1,19 @@
+/* Selecciona todos los párrafos dentro de div.container */
+.container p {
+    color: #e41e1e;
+  }
+  
+  /* Selecciona solo los párrafos hijos directos de div.container */
+  .container > p {
+    font-weight: bold;
+  }
+  
+  /* Selecciona el primer párrafo que sigue a h2 */
+  h2 + p {
+    color: #007bff;
+  }
+  
+  /* Selecciona todos los inputs de tipo texto */
+  input[type="text"] {
+    border: 2px solid #e60d0d;
+  }
