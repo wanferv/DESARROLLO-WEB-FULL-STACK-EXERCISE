@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Datos Recibidos</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <h2>Datos Enviados</h2>
+    <p id="datos"></p>
+
+    <script>
+      // Obtener los datos desde la URL
+      const parametros = new URLSearchParams(window.location.search);
+      const nombre = parametros.get("nombre");
+      const correo = parametros.get("correo");
+      const mens = parametros.get("mensaje");
+
+      const contacto = {};
+      contacto.nombre = nombre;
+      contacto.correo = correo;
+      contacto.mensaje = mens;
+
+      // Mostrar los datos
+      document.getElementById("datos").innerHTML =
+        "<strong>Nombre:</strong> " +
+        contacto.nombre +
+        "<br>" +
+        "<strong>Correo:</strong> " +
+        contacto.correo +
+        "<br>" +
+        "<strong>Mensaje:</strong> " +
+        contacto.mensaje;
+    </script>
+  </body>
+</html>

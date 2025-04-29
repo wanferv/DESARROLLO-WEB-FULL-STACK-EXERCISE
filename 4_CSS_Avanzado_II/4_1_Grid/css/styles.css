@@ -1,0 +1,14 @@
+.grid-container {
+  display: grid; /* Activamos Grid en este contenedor */
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 10px; /* Espacio entre filas y columnas */
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}

@@ -1,0 +1,13 @@
+.flex-columnas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.columna {
+  width: 45%;
+  background-color: #6c757d;
+  color: white;
+  padding: 20px;
+}

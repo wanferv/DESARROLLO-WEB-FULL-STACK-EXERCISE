@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.flex-contenedor {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e9ecef;
+    padding: 20px;  
+  }
+  
+  .item {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* estilos Ejemplo Flexbox - Ejes*/
+.contenedor {
+  display: flex; /* Establece el contenedor como un flexbox, permitiendo distribuir sus elementos hijos en un eje principal */
+  gap: 10px; /* Define el espacio (10px) entre los elementos hijos dentro del contenedor */
+  background-color: #f0f0f0; /* Establece un color de fondo gris claro para el contenedor */
+  border: 2px dashed #aaa; /* Aplica un borde de 2px de estilo discontinuo (dashed) y color gris medio */
+  padding: 20px; /* Añade espacio interno de 20px entre el borde del contenedor y su contenido */
+  height: 200px; /* Fija la altura del contenedor en 200px */
+  margin-bottom: 40px; /* Agrega un margen inferior de 40px para separar este contenedor del siguiente elemento */
+
+}
+.header{
+  position: fixed;
+  background-color: #007bff;
+}
+.item {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+/* Eje principal horizontal (por defecto) */
+.fila {
+  flex-direction: row; /* Eje principal → horizontal */
+  justify-content: center; /* Alinea en el eje principal (horizontal) */
+  align-items: center; /* Alinea en el eje cruzado (vertical) */
+}
+
+/* Eje principal vertical */
+.columna {
+  flex-direction: column; /* Eje principal → vertical */
+  justify-content: space-between; /* Eje principal (vertical) */
+  align-items: center; /* Eje cruzado (horizontal) */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #343a40;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menu a:hover {
+  background-color: #007bff;
+}

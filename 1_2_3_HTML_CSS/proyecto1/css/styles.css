@@ -24,8 +24,7 @@ body, html {
 /* Menú superior */
 .menu-superior {
     background: rgba(255, 0, 0, 0.9); /* Fondo rojo semitransparente */
-    position: relative;
-    z-index: 1000;
+
 }
 
 .menu-superior ul {

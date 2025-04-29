@@ -1,0 +1,9 @@
+ 
+.caja {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #4bc77f;
+    background-color: #f5f5f5;
+  }

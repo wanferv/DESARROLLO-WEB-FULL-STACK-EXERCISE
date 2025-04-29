@@ -1,0 +1,33 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* tres columnas iguales */
+  grid-gap: 15px;
+}
+
+.gallery-item {
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  font-size: 20px;
+}
+
+/* Aumentar tamaño de la primera imagen */
+.gallery-item:first-child {
+  grid-column: span 2; /* ocupa dos columnas */
+  grid-row: span 2; /* ocupa dos filas */
+}
+
+/* Estilos para los elementos específicos */
+/*
+.gallery-item:nth-child(2) {
+  grid-column: span 2;
+}
+*/
+.gallery-item:nth-child(3) {
+  background-color: #b3951c;
+  justify-content: right;
+  font-size: 80px;
+}
